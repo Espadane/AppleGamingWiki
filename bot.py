@@ -89,7 +89,7 @@ async def make_message(new_records):
         title = record['record_title']
         url = record['record_url']
         records.append(f'<a href="{url}">{title}</a>\n')
-    message = ' '.join(records)
+    message = ''.join(records)
     
     return message
 
