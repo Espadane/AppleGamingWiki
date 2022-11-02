@@ -12,7 +12,7 @@ def parser(days_count):
     
     
     new_recodrs = []
-    request_url = f'https://www.applegamingwiki.com/wiki/Special:RecentChangesLinked?hidebots=1&target=Home&limit=50&days={days_count}&enhanced=1&urlversion=2'
+    request_url = f'https://www.applegamingwiki.com/wiki/Special:RecentChanges/250?hidebots=1&limit=50&days={days_count}&enhanced=1&urlversion=2'
     r = requests.get(request_url)
     soup = BeautifulSoup(r.text, 'lxml')
     records = soup.find_all('span', class_='mw-title')
